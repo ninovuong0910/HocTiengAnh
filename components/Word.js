@@ -12,30 +12,30 @@ class Word extends Component {
     return (
       <View style={{backgroundColor: grey, height: 180, flexDirection: 'row', justifyContent: 'space-around', margin: 10, borderRadius: 5}} key={word._id}>
         <View style={{justifyContent: 'space-around', alignItems: 'center'}}>
-          <Text style={{fontSize: 40, color: 'green'}}>{word.en}</Text>
+          <Text style={{fontSize: 30, color: 'green'}}>{word.en}</Text>
           {
             word.isMemorized
             ?
             <TouchableOpacity 
               style={{backgroundColor: 'green', padding: 10, borderRadius: 5}}
               onPress={() => this.props.toggleWord(word)}>
-              <Text style={{fontSize: 40, color: 'white'}}>Forgot</Text>
+              <Text style={{fontSize: 30, color: 'white'}}>Forgot</Text>
             </TouchableOpacity>
             :
             <TouchableOpacity 
               style={{backgroundColor: 'red', padding: 10, borderRadius: 5}}
               onPress={() => this.props.toggleWord(word)}>
-              <Text style={{fontSize: 40, color: 'white'}}>Memorized</Text>
+              <Text style={{fontSize: 30, color: 'white'}}>Memorized</Text>
             </TouchableOpacity>
           }
           
         </View>
         <View style={{justifyContent: 'space-around', alignItems: 'center'}}>
-          <Text style={{fontSize: 40, color: 'red'}}>{word.isMemorized ? '----' : word.vn}</Text>
+          <Text style={{fontSize: 30, color: 'red'}}>{word.isMemorized ? '----' : word.vn}</Text>
           <TouchableOpacity 
             style={{backgroundColor: 'orange', padding: 10, borderRadius: 5}}
             onPress={() => this.props.removeWord(word._id)}>
-            <Text style={{fontSize: 40, color: 'black'}}>Remove</Text>
+            <Text style={{fontSize: 30, color: 'black'}}>Remove</Text>
           </TouchableOpacity>
         </View>
       </View>

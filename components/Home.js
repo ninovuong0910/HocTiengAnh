@@ -10,9 +10,24 @@ class Home extends Component {
   }
 
   render() {
+    if (this.props.words.length === 0) {
+      return (
+        <Text style={{fontSize: 30, margin: 10}}>
+          No Data
+        </Text>
+      )
+    }
     return (
       <FlatList
-        data={this.props.words}
+        data={this.props.words.filter(word => {
+          if (this.props.filterMode === 'show_memorized') {
+            return word.isMemorized
+          }
+          if (this.props.filterMode === 'show_forgot') {
+            return !word.isMemorized
+          }
+          return true;
+        })}
         keyExtractor={(item, index) => item.key}
         renderItem={(item) => <Word word={item.item}/>}
       />
@@ -21,7 +36,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  words: state.words
+  words: state.words,
+  filterMode: state.filterMode
 })
 
 export default connect(mapStateToProps, actions)(Home)

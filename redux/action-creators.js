@@ -33,3 +33,7 @@ export function toggleWord(word) {
     })
   }
 }
+
+export function changeFilterMode(filterMode) {
+  return {type: 'CHANGE_FILTER_MODE', filterMode}
+}

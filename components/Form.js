@@ -27,7 +27,7 @@ class Form extends Component {
         <TouchableOpacity 
           style={{backgroundColor: 'green', margin: 10, borderRadius: 5, alignItems: 'center'}}
           onPress={this.toggleForm}>
-          <Text style={{fontSize: 40, color: 'white'}}>
+          <Text style={{fontSize: 30, color: 'white'}}>
             +
           </Text>
         </TouchableOpacity>
@@ -37,12 +37,12 @@ class Form extends Component {
     return (
       <View style={{backgroundColor: '#ccc6c6', margin: 10, borderRadius: 5}}>
         <TextInput 
-          style={{fontSize: 40, backgroundColor: 'white', margin: 10, borderColor: 'black', padding: 10, borderWidth: 2, borderRadius: 5}}
+          style={{fontSize: 30, backgroundColor: 'white', margin: 10, borderColor: 'black', padding: 10, borderWidth: 2, borderRadius: 5}}
           value={this.state.txtEn}
           placeholder='English'
           onChangeText={text => this.setState({txtEn: text})}/>
         <TextInput 
-          style={{fontSize: 40, backgroundColor: 'white', margin: 10, borderColor: 'black', padding: 10, borderWidth: 2, borderRadius: 5}}
+          style={{fontSize: 30, backgroundColor: 'white', margin: 10, borderColor: 'black', padding: 10, borderWidth: 2, borderRadius: 5}}
           value={this.state.txtVn}
           placeholder='Vietnamese'
           onChangeText={text => this.setState({txtVn: text})}/>
@@ -59,7 +59,7 @@ class Form extends Component {
                   txtVn: ''
                 })
               }}>
-              <Text style={{fontSize: 40, color: isAddButtonEnabled ? 'white' : 'black'}}>
+              <Text style={{fontSize: 30, color: isAddButtonEnabled ? 'white' : 'black'}}>
                 Add word
               </Text>
             </TouchableOpacity>
@@ -68,7 +68,7 @@ class Form extends Component {
             <TouchableOpacity 
               style={{backgroundColor: 'red', margin: 10, borderRadius: 5, alignItems: 'center', padding: 10}}
               onPress={this.toggleForm}>
-              <Text style={{fontSize: 40, color: 'white'}}>
+              <Text style={{fontSize: 30, color: 'white'}}>
                 Cancle
               </Text>
             </TouchableOpacity>
